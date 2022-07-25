@@ -3,7 +3,7 @@ global _start
 
 _start:
   mov rax, 1     ; sys_write
-  mov rdi, 0     ; stdout
+  mov rdi, 1     ; stdout
   mov rsi, msg   ; char buffer
   mov rdx, len   ; size
   syscall
