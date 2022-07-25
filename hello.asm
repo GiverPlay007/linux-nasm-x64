@@ -2,14 +2,14 @@ section .text
 global _start
 
 _start:
-  mov rax, 1
-  mov rdi, 0
-  mov rsi, msg
-  mov rdx, len
+  mov rax, 1     ; sys_write
+  mov rdi, 0     ; stdout
+  mov rsi, msg   ; char buffer
+  mov rdx, len   ; size
   syscall
 
-  mov rax, 60
-  mov rdi, 0
+  mov rax, 60  ; sys_exit
+  mov rdi, 0   ; exit code
   syscall
 
 section .data
